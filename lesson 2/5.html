@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
-</head>
-<body>
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!--
 Обязательное задание.
 
 Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
@@ -29,10 +29,74 @@ Infinity делать не нужно, однако, в случае если б
 
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-<script>
-  "use strict";
+    <script>
+      "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
-</body>
+      /**
+       * функция вычисляет сумму двух чисел.
+       * @param {number} a - принимает любое положительное или отрицательное число
+       * @param {number} b - принимает любое положительное или отрицательное число
+       * @returns {number} - возвращает сумму чисел 'a' и 'b'
+       */
+      function sum(a, b) {
+        return a + b;
+      }
+
+      /**
+       * функция вычисляет разность, из большего числа вычитает наименьшее.
+       * @param {number} a - принимает любое положительное или отрицательное число
+       * @param {number} b - принимает любое положительное или отрицательное число
+       * @returns {number} - возвращает разность чисел 'a' и 'b'
+       */
+      function substraction(a, b) {
+        if (a > b) {
+          return a - b;
+        } else {
+          return b - a;
+        }
+      }
+      /**
+       * функция вычисляет произведение двух чисел.
+       * @param {number} a - принимает любое положительное или отрицательное число
+       * @param {number} b - принимает любое положительное или отрицательное число
+       * @returns {number} - возвращает произведение чисел 'a' и 'b'
+       */
+      function multiply(a, b) {
+        return a * b;
+      }
+      /**
+       * функция вычисляет частное от деления двух чисел.
+       * @param {number} a - принимает любое положительное или отрицательное число
+       * @param {number} b - принимает любое положительное или отрицательное число
+       * @returns {number} - возвращает частное от делениея чисел 'a' и 'b'
+       */
+      function division(a, b) {
+        return a / b;
+      }
+
+      /**
+       * функция вычисляет сумму, разность, произведение и частное
+       * @param {number} arg1 - принимает любое положительное или отрицательное число
+       * @param {number} arg2 - принимает любое положительное или отрицательное число
+       * @param {string} operation - принимает один из знаков сложения "+", вычитания "-", умножения "*" или деления "/", обязательно в кавычках!
+       * @returns {number} - возвращает результат оперции
+       */
+      function mathOperation(arg1, arg2, operation) {
+        if (operation === "+") {
+          return sum(arg1, arg2);
+        } else if (operation === "-") {
+          return substraction(arg1, arg2);
+        } else if (operation === "*") {
+          return multiply(arg1, arg2);
+        } else if (operation === "/") {
+          return division(arg1, arg2);
+        } else return NaN;
+      }
+
+      console.log(mathOperation(3, 5, "+"));
+      console.log(mathOperation(3, 5, "-"));
+      console.log(mathOperation(3, 5, "*"));
+      console.log(mathOperation(3, 5, "/"));
+    </script>
+  </body>
 </html>
