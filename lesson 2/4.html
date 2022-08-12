@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
-</head>
-<body>
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!--
 Обязательное задание.
 
 Необходимо реализовать четыре функции, каждая функция должна принимать по два
@@ -28,10 +28,55 @@
 
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-<script>
-  "use strict";
+    <script>
+      "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
-</body>
+      /**
+       * функция вычисляет сумму двух чисел.
+       * @param {number} a - принимает любое положительное или отрицательное число
+       * @param {number} b - принимает любое положительное или отрицательное число
+       * @returns {number} - возвращает сумму чисел 'a' и 'b'
+       */
+      function sum(a, b) {
+        return a + b;
+      }
+
+      /**
+       * функция вычисляет разность, из большего числа вычитает наименьшее.
+       * @param {number} a - принимает любое положительное или отрицательное число
+       * @param {number} b - принимает любое положительное или отрицательное число
+       * @returns {number} - возвращает разность чисел 'a' и 'b'
+       */
+      function substraction(a, b) {
+        if (a > b) {
+          return a - b;
+        } else {
+          return b - a;
+        }
+      }
+      /**
+       * функция вычисляет произведение двух чисел.
+       * @param {number} a - принимает любое положительное или отрицательное число
+       * @param {number} b - принимает любое положительное или отрицательное число
+       * @returns {number} - возвращает произведение чисел 'a' и 'b'
+       */
+      function multiply(a, b) {
+        return a * b;
+      }
+      /**
+       * функция вычисляет частное от деления двух чисел.
+       * @param {number} a - принимает любое положительное или отрицательное число
+       * @param {number} b - принимает любое положительное или отрицательное число
+       * @returns {number} - возвращает частное от делениея чисел 'a' и 'b'
+       */
+      function division(a, b) {
+        return a / b;
+      }
+
+      console.log(sum(2, 6));
+      console.log(substraction(2, 2));
+      console.log(multiply(2, 6));
+      console.log(division(2, 6));
+    </script>
+  </body>
 </html>
